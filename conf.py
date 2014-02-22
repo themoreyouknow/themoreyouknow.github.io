@@ -30,7 +30,7 @@ website = 'http://127.0.0.1/blog/html/'
 # **************************************************************
 
 # Add your Disqus shortname to enable comments powered by Disqus
-disqus_shortname = None
+disqus_shortname = 'tmyk'
 
 # Change your favicon (new favicon goes in _static directory)
 html_favicon = 'tinkerer.ico'
