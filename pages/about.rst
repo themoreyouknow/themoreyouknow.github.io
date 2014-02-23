@@ -1,4 +1,4 @@
-about
+About
 =====
 
 I created this page in order to share and synthesize information and various
