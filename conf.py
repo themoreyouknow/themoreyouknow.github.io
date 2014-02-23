@@ -23,7 +23,7 @@ author = 'Tmyk'
 copyright = '2014, ' + author
 
 # Change this to your blog root URL (required for RSS feed)
-website = 'http://themoreyouknow.github.io/'
+website = 'http://themoreyouknow.github.io/blog/html'
 
 # **************************************************************
 # More tweaks you can do
