@@ -36,7 +36,7 @@ disqus_shortname = 'tmyk'
 html_favicon = 'tinkerer.ico'
 
 # Pick another Tinkerer theme or use your own
-html_theme = "flat"
+html_theme = "tinkerturquoise"
 
 # Theme-specific options, see docs
 html_theme_options = { }
@@ -59,7 +59,7 @@ slug_word_separator = '_'
 # **************************************************************
 
 # Add other Sphinx extensions here
-extensions = ['tinkerer.ext.blog', 'tinkerer.ext.disqus']
+extensions = ['tinkerer.ext.blog', 'tinkerer.ext.disqus', 'sphinxjp.themecore']
 
 # Add other template paths here
 templates_path = ['_templates']
@@ -75,7 +75,7 @@ exclude_patterns = ["drafts/*", "_templates/*"]
 
 # Add templates to be rendered in sidebar here
 html_sidebars = {
-    "**": ["recent.html", "searchbox.html"]
+    "**": ["adsense.html", "recent.html", "searchbox.html"]
 }
 
 # **************************************************************

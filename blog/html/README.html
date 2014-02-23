@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html><!--[if lt IE 7]>      <html xmlns="http://www.w3.org/1999/xhtml"
     xmlns:og="http://ogp.me/ns#"
     xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -19,7 +21,7 @@
             <link rel="stylesheet" href="_static/normalize.css" type="text/css">
             <link rel="stylesheet" href="_static/sphinx.css" type="text/css">
             <link rel="stylesheet" href="_static/main.css" type="text/css">
-            <link rel="stylesheet" href="_static/flat.css" type="text/css">
+            <link rel="stylesheet" href="_static/tinkerturquoise.css" type="text/css">
             <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
             <link rel="stylesheet" href="_static/webfont.css" type="text/css">
         <link rel="shortcut icon" href="_static/tinkerer.ico" /><!-- Load modernizr and JQuery -->
@@ -36,39 +38,29 @@
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="_static/underscore.js"></script><script type="text/javascript" src="_static/doctools.js"></script><script type="text/javascript" src="_static/disqus.js"></script><script type="text/javascript" src="_static/google_analytics.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // Scroll to content if on small screen
-            if (screen.width < 480)
-            {
-                $(document).scrollTop(document.getElementsByTagName("article")[0].offsetTop - 44);
-            }
-        });
-    </script></head>
+    </script><script type="text/javascript" src="_static/underscore.js"></script><script type="text/javascript" src="_static/doctools.js"></script><script type="text/javascript" src="_static/disqus.js"></script><script type="text/javascript" src="_static/google_analytics.js"></script></head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-      <div id="container"><header>
+      <div id="container">
+  <header>
             <hgroup>
               <h1><a href="index.html">The More You Know</a></h1><h2>Learn more stuff!</h2></hgroup>
           </header>
       
-<nav>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Tmyk -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:250px"
-     data-ad-client="ca-pub-8993602011917340"
-     data-ad-slot="7247102047"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</nav>
-<div class="main-container"><div class="main wrapper clearfix"><article>
+  <nav>
+    <ul><li class="quicklink"><div class="rss">
+        <a href="rss.html" title="Subscribe via RSS"><span class="webfont">B</span></a>
+    </div></li><li class="main-nav">
+          <a href="index.html">Home</a>
+        </li>
+      <li>
+          <a href="archive.html">Archives</a>
+        </li>
+    </ul>
+  </nav><div class="main-container"><div class="main wrapper clearfix"><article>
     <div class="section" id="the-more-you-know">
 <h1>The More You Know</h1>
 <p>This is the repository for the website &#8220;The More You Know&#8221;.</p>
@@ -81,7 +73,16 @@ generated html directly.</p>
         
         
         
-        </div></article><aside class="sidebar"><section><div class="widget">
+        </div>
+    </article><aside class="sidebar"><section><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Tmyk -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-8993602011917340"
+     data-ad-slot="7247102047"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></section><section><div class="widget">
     <h1>Recent Posts</h1>
     <ul><li>
             <a href="2014/02/22/welcome_to_the_more_you_know.html">Welcome to The More You Know</a>
@@ -95,7 +96,74 @@ generated html directly.</p>
     </form>
 </div></section></aside></div> <!-- #main --></div> <!-- #main-container -->
 
-        <div class="footer-container"><footer class="wrapper">&copy; Copyright 2014, Tmyk. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>.</footer></div> <!-- footer-container -->
+        <div class="footer-container"><footer class="wrapper">&copy; Copyright 2014, Tmyk. Powered by <a href="http://www.tinkerer.me/" target="_blank">Tinkerer</a> and <a href="http://sphinx.pocoo.org/" target="_blank">Sphinx</a>. <a href="https://pypi.python.org/pypi/sphinxjp.themes.tinkerturquoise" target="_blank">This theme</a> is originally designed by <a href="http://naoiwata.github.com/" target="_blank">naoiwata</a>.</footer>
+  <script type="text/javascript">
+    var FixZoom,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+    FixZoom = (function() {
+      var ua;
+      ua = window.navigator.userAgent.toLowerCase();
+
+      function FixZoom() {
+        this.on_resize = __bind(this.on_resize, this);
+        this.dom_id = 'wrap';
+        this.max_width = 640;
+        this.device_width = null;
+        this.device_height = null;
+        this.window_width = window.innerWidth;
+        this.window_height = window.innerHeight;
+        this.iphone = ua.indexOf('iphone') > -1;
+        this.ipod = ua.indexOf('ipod') > -1;
+        this.ipad = ua.indexOf('ipad') > -1;
+        this.android = ua.indexOf('android') > -1;
+      }
+
+      FixZoom.prototype.init = function(dom_id, max) {
+        var _this = this;
+        this.dom_id = dom_id;
+        if (max > 0) {
+          this.max_width = max;
+        }
+        setTimeout(function() {
+          window.scrollTo(0, 1);
+          return _this.on_resize();
+        }, 100);
+        this.set_ua();
+        this.on_resize();
+        window.addEventListener('resize', this.on_resize);
+      };
+
+      FixZoom.prototype.on_resize = function() {
+        var wrapper;
+        if (!this.iphone && !this.ipod && !this.android) {
+          return;
+        }
+        this.window_width = window.innerWidth;
+        wrapper = document.getElementById(this.dom_id);
+        if (this.window_width >= this.max_width) {
+          wrapper.style.width = this.max_width + 'px';
+          wrapper.style.margin = '0 auto';
+        } else {
+          wrapper.style.zoom = this.window_width / this.max_width;
+        }
+      };
+
+      FixZoom.prototype.set_ua = function() {
+        if (this.iphone || this.android || this.ipad || this.ipod) {
+          document.body.className += ' sp';
+        } else {
+          document.body.className += ' pc';
+        }
+      };
+
+      return FixZoom;
+
+    })();
+
+    window.fix_zoom = new FixZoom();
+    $('head').append('<meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport" />');
+    fix_zoom.init('container', 640);
+  </script></div> <!-- footer-container -->
 
       </div> <!--! end of #container --><script type="text/javascript">    var disqus_shortname = "tmyk";    disqus_count();</script><!--[if lt IE 7 ]>
           <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
