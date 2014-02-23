@@ -16,4 +16,3 @@ way, let's rock!
 .. author:: default
 .. categories:: none
 .. tags:: none
-.. comments::
