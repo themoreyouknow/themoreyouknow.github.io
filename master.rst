@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2014/02/28/blood_and_its_color_s
    2014/02/26/doppler_effect
    2014/02/23/human_brain_and_cooking
    2014/02/23/maillard_reaction
