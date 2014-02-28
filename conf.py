@@ -33,7 +33,7 @@ website = 'http://themoreyouknow.github.io/blog/html'
 disqus_shortname = 'tmyk'
 
 # Change your favicon (new favicon goes in _static directory)
-html_favicon = 'tinkerer.ico'
+html_favicon = 'favicon.ico'
 
 # Pick another Tinkerer theme or use your own
 html_theme = "tinkerturquoise"
