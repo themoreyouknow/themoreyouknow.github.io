@@ -66,6 +66,25 @@ distance in your meat, and then cook like this.
 Finally, you can rub garlic on some food, like toasted or hard bread, to make
 garlic croutons.
 
+Health
+------
+
+Not all the *facts* about garlic and health have been proved or explained, but
+it does contains various compounds that have good properties for your health,
+lets have a quick tour.
+
+- Positive effect on blood pressure, this may be due its blood thinner effect
+  due to its compounds: `fructan <http://en.wikipedia.org/wiki/Fructan>`_,
+  `magnesium <http://en.wikipedia.org/wiki/Magnesium>`_ and `adenosine
+  <http://en.wikipedia.org/wiki/Adenosine>`_, and prevent fat deposit in
+  arteries.
+- Ease digestion, as vitamin B1 help build enzymes that ease transit.
+- May help get rid of a cold, because allicin will help destroy viruses and
+  bacterias.
+- Contains a lot of anti-infective agents: allicin, vitamin C, iodine,
+  magnesium, and `sulfur <http://en.wikipedia.org/wiki/Sulfur>`_.
+- Contains `antioxidant <http://en.wikipedia.org/wiki/Antioxidant>`_ which may
+  act on aging (on `Senescence <http://en.wikipedia.org/wiki/Senescence>`_
 
 .. author:: default
 .. categories:: none
