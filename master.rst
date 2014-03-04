@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2014/03/04/cinemagraph
    2014/03/04/all_about_garlic
    2014/03/02/the_brain_imagination_and_memories
    2014/02/28/lethal_doses
