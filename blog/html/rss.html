@@ -5,8 +5,118 @@
         <link>http://themoreyouknow.github.io/blog/html/</link>
         <description>Learn more stuff!</description>
         <language>en-us</language>
-        <pubDate>Tue, 04 Mar 2014 00:00:00 +0100</pubDate>
+        <pubDate>Thu, 06 Mar 2014 00:00:00 +0100</pubDate>
         
+        <item>
+            <link>http://themoreyouknow.github.io/blog/html/2014/03/06/bases_binary_hexadecimal_ascii.html</link>
+            <guid>http://themoreyouknow.github.io/blog/html/2014/03/06/bases_binary_hexadecimal_ascii.html</guid>
+            <title><![CDATA[Bases, binary, hexadecimal, ascii]]></title>
+            <description><![CDATA[<div class="section" id="bases-binary-hexadecimal-ascii">
+<h1>Bases, binary, hexadecimal, ascii</h1>
+<p>You may have heard that computers use binary, but why is that? Simply because in
+electronic, if you want to keep it simple, components have two possible state:
+on or off -&gt; 0 or 1. The hardware is easier to design this way.</p>
+<div class="section" id="bases">
+<h2>Bases</h2>
+<p>When we normally count, in what we call <a class="reference external" href="http://en.wikipedia.org/wiki/Decimal">decimal</a>, is actually base-10, which means we
+use 10 numbers: from 0 to 9</p>
+<p>So if you count:</p>
+<div class="highlight-python"><div class="highlight"><pre>0, 1, 2, 3, 4, 5, 6, 7, 8, 9...
+</pre></div>
+</div>
+<p>And then what? 10 of course, but why is that: you reached the end of your
+<em>base</em>, thus increment the second digit, and loop back to beginning for the
+first digit, you could use this notation to see it better:</p>
+<div class="highlight-python"><div class="highlight"><pre>08, 09, 10...
+</pre></div>
+</div>
+<p>Another way to think of it is to use the calculation behind it, we use base 10,
+so each digit is number * base ^ rank, with the rank starting out at 0. Lets use
+42:</p>
+<div class="highlight-python"><div class="highlight"><pre>(4 * 10¹) + (2 * 10⁰)
+(4 * 10) + (2 * 1)
+</pre></div>
+</div>
+<p>Any bases are possible, as long as you define what needs to be used to represent
+it, of course, some are more common than others, especially in computer science.</p>
+</div>
+<div class="section" id="binary">
+<h2>Binary</h2>
+<p>Given the previously explained on/off paradigm in electronic, it was chosen to
+use <a class="reference external" href="http://en.wikipedia.org/wiki/Binary_number">binary</a>, or base-2 in
+computers. We so have 2 numbers to count: 0 and 1</p>
+<p>If you apply the same as earlier:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>And that’s it, you reached the end of the base, so increment next digit:</p>
+<div class="highlight-python"><div class="highlight"><pre>0, 1, 10, 11, 100, 101, 110, 111...
+0  1   2   3    4    5    6    7...
+</pre></div>
+</div>
+<p>And as of 42:</p>
+<div class="highlight-python"><div class="highlight"><pre>101010
+
+0 * 2⁰ + 1 * 2¹ + 0 * 2² + 1 * 2³ + 0 * 2⁴ + 1 * 2⁵
+0      + 2      + 0      + 8      + 0      + 32
+= 42
+</pre></div>
+</div>
+<p>In computer, the number of <a class="reference external" href="http://en.wikipedia.org/wiki/Bit">bits</a> you may
+have heard about, is the number of binary digit used to represent the number.
+The <a class="reference external" href="http://en.wikipedia.org/wiki/Byte">byte</a> which is used to compute volume
+of data, is 8 bits, which allows for values up to 255.</p>
+<p>To identify we sometimes use prefix <strong>0b</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">0</span><span class="n">b101010</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hexadecimal">
+<h2>Hexadecimal</h2>
+<p>To avoid the need to read binary all the time, it is actually easier given the
+data is grouped in bytes in computers to represent values in <a class="reference external" href="http://en.wikipedia.org/wiki/Hexadecimal">hexadecimal</a> rather than binary or decimal.
+Hexadecimal is base-16, we use numbers from 0 to 9, and letters form A to F, and
+the prefix <strong>0x</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x2</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x4</span><span class="p">,</span> <span class="mh">0x5</span><span class="p">,</span> <span class="mh">0x6</span><span class="p">,</span> <span class="mh">0x7</span><span class="p">,</span> <span class="mh">0x8</span><span class="p">,</span> <span class="mh">0x9</span><span class="p">,</span> <span class="mh">0xa</span><span class="p">,</span> <span class="mh">0xb</span><span class="p">,</span> <span class="mh">0xc</span><span class="p">,</span> <span class="mh">0xd</span><span class="p">,</span> <span class="mh">0xe</span><span class="p">,</span> <span class="mh">0xf</span>
+</pre></div>
+</div>
+<p>Applying the same technique as before:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mh">0x0e</span><span class="p">,</span> <span class="mh">0x0f</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x11</span>
+</pre></div>
+</div>
+<p>And for 42:</p>
+<div class="highlight-python"><div class="highlight"><pre>0x2a
+
+a * 16⁰ + 2 * 16¹
+10 * 1 + 2 * 16
+= 42
+</pre></div>
+</div>
+</div>
+<div class="section" id="ascii">
+<h2>Ascii</h2>
+<p>Aka <a class="reference external" href="http://en.wikipedia.org/wiki/Ascii">American Standard Code for Information Interchange</a>, is the basic representation of
+characters used in computers, using numbers up to 128 to encode characters
+representation. It was later extended in various different versions to suite
+more languages.</p>
+<p>For example <strong>A</strong> is 0x41 (65), and following capital letters are following in
+order, and <strong>a</strong> is 0x61 (97) and so on.</p>
+<p>In binary, this means:</p>
+<div class="highlight-python"><div class="highlight"><pre>0x41 -&gt; 0b01000001
+0x61 -&gt; 0b01100001
+</pre></div>
+</div>
+<p>You may notice that the left hand bit is 0 in both case, as said, ascii is
+limited to 128, thus never using the bit of rank 7. The various extended
+versions make use of it, but have to be a different version for different
+languages as this still is quite limited.</p>
+<p>Later, the <a class="reference external" href="http://en.wikipedia.org/wiki/Unicode">unicode</a>, and <a class="reference external" href="http://en.wikipedia.org/wiki/Utf">UTF</a> variations where created, but this is a
+vast topic, which I will not talk about in here.</p>
+</div>
+</div>]]></description>
+             <pubDate>Thu, 06 Mar 2014 00:00:00 +0100</pubDate>
+        </item>
+    
         <item>
             <link>http://themoreyouknow.github.io/blog/html/2014/03/04/cinemagraph.html</link>
             <guid>http://themoreyouknow.github.io/blog/html/2014/03/04/cinemagraph.html</guid>

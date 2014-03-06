@@ -30,7 +30,7 @@
         <script>window.jQuery || document.write('<script src="_static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="_static/plugins.js"></script>
         <script src="_static/main.js"></script>
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.html" /><script type="text/javascript">
+        <link rel="next" title="Older" href="page2.html" /><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.html" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
         VERSION:     '1.3.0',
@@ -66,6 +66,124 @@
         </li>
     </ul>
   </nav><div class="main-container"><div class="main wrapper clearfix"><article><div class="timestamp postmeta">
+            <span>March 06, 2014</span>
+        </div>
+        <div class="section" id="bases-binary-hexadecimal-ascii">
+<h1><a href="2014/03/06/bases_binary_hexadecimal_ascii.html">Bases, binary, hexadecimal, ascii</a></h1>
+<p>You may have heard that computers use binary, but why is that? Simply because in
+electronic, if you want to keep it simple, components have two possible state:
+on or off -&gt; 0 or 1. The hardware is easier to design this way.</p>
+<div class="section" id="bases">
+<h2>Bases</h2>
+<p>When we normally count, in what we call <a class="reference external" href="http://en.wikipedia.org/wiki/Decimal">decimal</a>, is actually base-10, which means we
+use 10 numbers: from 0 to 9</p>
+<p>So if you count:</p>
+<div class="highlight-python"><div class="highlight"><pre>0, 1, 2, 3, 4, 5, 6, 7, 8, 9...
+</pre></div>
+</div>
+<p>And then what? 10 of course, but why is that: you reached the end of your
+<em>base</em>, thus increment the second digit, and loop back to beginning for the
+first digit, you could use this notation to see it better:</p>
+<div class="highlight-python"><div class="highlight"><pre>08, 09, 10...
+</pre></div>
+</div>
+<p>Another way to think of it is to use the calculation behind it, we use base 10,
+so each digit is number * base ^ rank, with the rank starting out at 0. Lets use
+42:</p>
+<div class="highlight-python"><div class="highlight"><pre>(4 * 10¹) + (2 * 10⁰)
+(4 * 10) + (2 * 1)
+</pre></div>
+</div>
+<p>Any bases are possible, as long as you define what needs to be used to represent
+it, of course, some are more common than others, especially in computer science.</p>
+</div>
+<div class="section" id="binary">
+<h2>Binary</h2>
+<p>Given the previously explained on/off paradigm in electronic, it was chosen to
+use <a class="reference external" href="http://en.wikipedia.org/wiki/Binary_number">binary</a>, or base-2 in
+computers. We so have 2 numbers to count: 0 and 1</p>
+<p>If you apply the same as earlier:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>And that’s it, you reached the end of the base, so increment next digit:</p>
+<div class="highlight-python"><div class="highlight"><pre>0, 1, 10, 11, 100, 101, 110, 111...
+0  1   2   3    4    5    6    7...
+</pre></div>
+</div>
+<p>And as of 42:</p>
+<div class="highlight-python"><div class="highlight"><pre>101010
+
+0 * 2⁰ + 1 * 2¹ + 0 * 2² + 1 * 2³ + 0 * 2⁴ + 1 * 2⁵
+0      + 2      + 0      + 8      + 0      + 32
+= 42
+</pre></div>
+</div>
+<p>In computer, the number of <a class="reference external" href="http://en.wikipedia.org/wiki/Bit">bits</a> you may
+have heard about, is the number of binary digit used to represent the number.
+The <a class="reference external" href="http://en.wikipedia.org/wiki/Byte">byte</a> which is used to compute volume
+of data, is 8 bits, which allows for values up to 255.</p>
+<p>To identify we sometimes use prefix <strong>0b</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">0</span><span class="n">b101010</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hexadecimal">
+<h2>Hexadecimal</h2>
+<p>To avoid the need to read binary all the time, it is actually easier given the
+data is grouped in bytes in computers to represent values in <a class="reference external" href="http://en.wikipedia.org/wiki/Hexadecimal">hexadecimal</a> rather than binary or decimal.
+Hexadecimal is base-16, we use numbers from 0 to 9, and letters form A to F, and
+the prefix <strong>0x</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x2</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x4</span><span class="p">,</span> <span class="mh">0x5</span><span class="p">,</span> <span class="mh">0x6</span><span class="p">,</span> <span class="mh">0x7</span><span class="p">,</span> <span class="mh">0x8</span><span class="p">,</span> <span class="mh">0x9</span><span class="p">,</span> <span class="mh">0xa</span><span class="p">,</span> <span class="mh">0xb</span><span class="p">,</span> <span class="mh">0xc</span><span class="p">,</span> <span class="mh">0xd</span><span class="p">,</span> <span class="mh">0xe</span><span class="p">,</span> <span class="mh">0xf</span>
+</pre></div>
+</div>
+<p>Applying the same technique as before:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mh">0x0e</span><span class="p">,</span> <span class="mh">0x0f</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x11</span>
+</pre></div>
+</div>
+<p>And for 42:</p>
+<div class="highlight-python"><div class="highlight"><pre>0x2a
+
+a * 16⁰ + 2 * 16¹
+10 * 1 + 2 * 16
+= 42
+</pre></div>
+</div>
+</div>
+<div class="section" id="ascii">
+<h2>Ascii</h2>
+<p>Aka <a class="reference external" href="http://en.wikipedia.org/wiki/Ascii">American Standard Code for Information Interchange</a>, is the basic representation of
+characters used in computers, using numbers up to 128 to encode characters
+representation. It was later extended in various different versions to suite
+more languages.</p>
+<p>For example <strong>A</strong> is 0x41 (65), and following capital letters are following in
+order, and <strong>a</strong> is 0x61 (97) and so on.</p>
+<p>In binary, this means:</p>
+<div class="highlight-python"><div class="highlight"><pre>0x41 -&gt; 0b01000001
+0x61 -&gt; 0b01100001
+</pre></div>
+</div>
+<p>You may notice that the left hand bit is 0 in both case, as said, ascii is
+limited to 128, thus never using the bit of rank 7. The various extended
+versions make use of it, but have to be a different version for different
+languages as this still is quite limited.</p>
+<p>Later, the <a class="reference external" href="http://en.wikipedia.org/wiki/Unicode">unicode</a>, and <a class="reference external" href="http://en.wikipedia.org/wiki/Utf">UTF</a> variations where created, but this is a
+vast topic, which I will not talk about in here.</p>
+</div>
+</div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by Tmyk</span>
+        </div>
+        
+        <div class="tags">
+            <span>
+                Tags:
+                <a href="tags/bases.html">bases</a>, <a href="tags/maths.html">maths</a>, <a href="tags/counting.html">counting</a>, <a href="tags/binary.html">binary</a>, <a href="tags/hexadecimal.html">hexadecimal</a>, <a href="tags/ascii.html">ascii</a></span>
+        </div>
+        <div class="comments">
+            <a href="http://themoreyouknow.github.io/blog/html/2014/03/06/bases_binary_hexadecimal_ascii.html#disqus_thread" data-disqus-identifier="2014/03/06/bases_binary_hexadecimal_ascii">Leave a comment</a>
+        </div></div><div class="separator post_separator"></div><div class="timestamp postmeta">
             <span>March 04, 2014</span>
         </div>
         <div class="section" id="cinemagraph">
@@ -573,28 +691,12 @@ that goes in length about it if you wish to find out more.</p>
         </div>
         <div class="comments">
             <a href="http://themoreyouknow.github.io/blog/html/2014/02/23/maillard_reaction.html#disqus_thread" data-disqus-identifier="2014/02/23/maillard_reaction">Leave a comment</a>
-        </div></div><div class="separator post_separator"></div><div class="timestamp postmeta">
-            <span>February 22, 2014</span>
-        </div>
-        <div class="section" id="welcome-to-the-more-you-know">
-<h1><a href="2014/02/22/welcome_to_the_more_you_know.html">Welcome to The More You Know</a></h1>
-<p>Hello all!</p>
-<p>The purpose of this website is to share some interesting things we can learn
-online, no matter the subject, if it is worth knowing, it is worth sharing.</p>
-<p>Like Buddha said:</p>
-<p><strong>There is no wealth like knowledge, and no poverty like ignorance.</strong></p>
-<p>So I hope this will be a good place to learn and share more things along the
-way, let’s rock!</p>
-</div>
-        <div class="postmeta">
-        <div class="author">
-            <span>Posted by Tmyk</span>
-        </div>
-        
-        
-        </div><div class="archive_link">
+        </div></div><div class="archive_link">
         <a href="archive.html"> &mdash; Blog Archive &mdash; </a>
-    </div></article><aside class="sidebar"><section><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </div><ul class="related clearfix">
+            <li class="left"></li>
+            <li class="right"><a href="page2.html">Older</a> &raquo; </li>
+        </ul></article><aside class="sidebar"><section><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Tmyk -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:300px;height:250px"
@@ -605,6 +707,8 @@ way, let’s rock!</p>
 </script></section><section><div class="widget">
     <h1>Recent Posts</h1>
     <ul><li>
+            <a href="2014/03/06/bases_binary_hexadecimal_ascii.html">Bases, binary, hexadecimal, ascii</a>
+        </li><li>
             <a href="2014/03/04/cinemagraph.html">Cinemagraph</a>
         </li><li>
             <a href="2014/03/04/all_about_garlic.html">All about Garlic</a>
@@ -622,8 +726,6 @@ way, let’s rock!</p>
             <a href="2014/02/23/human_brain_and_cooking.html">Human Brain and Cooking</a>
         </li><li>
             <a href="2014/02/23/maillard_reaction.html">Maillard Reaction</a>
-        </li><li>
-            <a href="2014/02/22/welcome_to_the_more_you_know.html">Welcome to The More You Know</a>
         </li></ul>
 </div>
 </section><section><div class="widget" id="searchbox">
@@ -633,7 +735,7 @@ way, let’s rock!</p>
         <button type="submit"><span class="webfont">L</span></button>
     </form>
 </div></section><section><div class="widget">
-    <h1>Tags</h1><a href="tags/animation.html">animation</a> (1), <a href="tags/biology.html">biology</a> (1), <a href="tags/blood.html">blood</a> (1), <a href="tags/body.html">body</a> (4), <a href="tags/brain.html">brain</a> (2), <a href="tags/chemicals.html">chemicals</a> (1), <a href="tags/cinegraph.html">cinegraph</a> (1), <a href="tags/cinemagraph.html">cinemagraph</a> (1), <a href="tags/color.html">color</a> (1), <a href="tags/cooking.html">cooking</a> (2), <a href="tags/doppler.html">doppler</a> (1), <a href="tags/evolution.html">evolution</a> (1), <a href="tags/food.html">food</a> (2), <a href="tags/garlic.html">garlic</a> (1), <a href="tags/gif.html">gif</a> (1), <a href="tags/human.html">human</a> (2), <a href="tags/hypnotherapy.html">hypnotherapy</a> (1), <a href="tags/kitchen.html">kitchen</a> (1), <a href="tags/lethal.html">lethal</a> (1), <a href="tags/nlp.html">NLP</a> (1), <a href="tags/oxidation.html">oxidation</a> (1), <a href="tags/science.html">science</a> (3), <a href="tags/sound.html">sound</a> (1), <a href="tags/still.html">still</a> (1), <a href="tags/tickling.html">tickling</a> (1), <a href="tags/wave.html">wave</a> (1)</div></section><section><a href="https://twitter.com/TmykGh" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @TmykGh</a>
+    <h1>Tags</h1><a href="tags/animation.html">animation</a> (1), <a href="tags/ascii.html">ascii</a> (1), <a href="tags/bases.html">bases</a> (1), <a href="tags/binary.html">binary</a> (1), <a href="tags/biology.html">biology</a> (1), <a href="tags/blood.html">blood</a> (1), <a href="tags/body.html">body</a> (4), <a href="tags/brain.html">brain</a> (2), <a href="tags/chemicals.html">chemicals</a> (1), <a href="tags/cinegraph.html">cinegraph</a> (1), <a href="tags/cinemagraph.html">cinemagraph</a> (1), <a href="tags/color.html">color</a> (1), <a href="tags/cooking.html">cooking</a> (2), <a href="tags/counting.html">counting</a> (1), <a href="tags/doppler.html">doppler</a> (1), <a href="tags/evolution.html">evolution</a> (1), <a href="tags/food.html">food</a> (2), <a href="tags/garlic.html">garlic</a> (1), <a href="tags/gif.html">gif</a> (1), <a href="tags/hexadecimal.html">hexadecimal</a> (1), <a href="tags/human.html">human</a> (2), <a href="tags/hypnotherapy.html">hypnotherapy</a> (1), <a href="tags/kitchen.html">kitchen</a> (1), <a href="tags/lethal.html">lethal</a> (1), <a href="tags/maths.html">maths</a> (1), <a href="tags/nlp.html">NLP</a> (1), <a href="tags/oxidation.html">oxidation</a> (1), <a href="tags/science.html">science</a> (3), <a href="tags/sound.html">sound</a> (1), <a href="tags/still.html">still</a> (1), <a href="tags/tickling.html">tickling</a> (1), <a href="tags/wave.html">wave</a> (1)</div></section><section><a href="https://twitter.com/TmykGh" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @TmykGh</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <a href="https://plus.google.com/104491001367279684604" rel="publisher"><img src="/_static/gplus32.png"></a></section><section>
 <script type="text/javascript">var switchTo5x=true;</script>

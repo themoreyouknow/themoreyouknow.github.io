@@ -17,7 +17,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="This site contains stuff and information worth knowing, the more knowledge the more fun. Some are odd, some are strange, some may be obvious, but the idea is to learn interesting stuff on a regular basis.">
         <meta name="viewport" content="width=device-width">
-        <title>Lethal Doses &mdash; The More You Know</title>
+        <title>Bases, binary, hexadecimal, ascii &mdash; The More You Know</title>
             <link rel="stylesheet" href="../../../_static/normalize.css" type="text/css">
             <link rel="stylesheet" href="../../../_static/sphinx.css" type="text/css">
             <link rel="stylesheet" href="../../../_static/main.css" type="text/css">
@@ -30,7 +30,7 @@
         <script>window.jQuery || document.write('<script src="../../../_static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="../../../_static/plugins.js"></script>
         <script src="../../../_static/main.js"></script>
-        <link rel="next" title="Tickling" href="tickling.html" /><link rel="prev" title="The Brain, Imagination, and Memories" href="../../03/02/the_brain_imagination_and_memories.html" /><link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.html" /><script type="text/javascript">
+        <link rel="next" title="Cinemagraph" href="../04/cinemagraph.html" /><link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.html" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
         VERSION:     '1.3.0',
@@ -66,74 +66,109 @@
         </li>
     </ul>
   </nav><div class="main-container"><div class="main wrapper clearfix"><article><div class="timestamp postmeta">
-            <span>February 28, 2014</span>
+            <span>March 06, 2014</span>
         </div>
-    <div class="section" id="lethal-doses">
-<h1>Lethal Doses</h1>
-<p>A well known fact about alcohol, is that it should be consumed in reasonable
-quantities. You probably have legal warning in advertisement for drinks in your
-country. If that is of interest, you can have a look at <a class="reference external" href="http://www.icap.org/table/HealthwarningLabels">Health Warning Labels</a> for various countries.</p>
-<p>But that&#8217;s not the point here, what I want to do, is to list the amount of some
-common things we do intake regularly, and that can be lethal in higher
-quantities, and try to relate it to the quantity of beverage or food we would
-have to consume in order to reach this amount.</p>
-<p>Obviously, this would have to be absorbed quite fast, as the body would try to
-eliminate as much of it as fast as it can.</p>
-<p>Remember that this are assumed lethal doses, serious problems will arise far
-earlier! Please do not assume you can safely go to half of this without any
-issues, plus all this is only theoretical.</p>
-<div class="section" id="alcohol">
-<h2>Alcohol</h2>
-<p>The generally admitted lethal dose is of 0.4% <a class="reference external" href="http://en.wikipedia.org/wiki/Blood_alcohol_content">Blood Alcohol Content</a>.</p>
-<p>It <a class="reference external" href="http://www.alcohol.org.nz/alcohol-you/your-body-alcohol/health-effects/alcohol-poisoning">seems</a>
-that sums up from 5 to 8g per kilogram for an adult. So if we take the lower
-limit, and a person weighting 60kg, this means 300g of alcohol.</p>
-<ul class="simple">
-<li>A bottle of Żubrówka is 700ml at 40% = 280g -&gt; 1.07 bottles</li>
-<li>A bottle of red wine of 750ml, at 13% = 97.5g -&gt; 3.07 bottles</li>
-<li>Beer in between at 6.5% in 33ml bottles = 2.145g -&gt; 139 bottles</li>
-</ul>
+    <div class="section" id="bases-binary-hexadecimal-ascii">
+<h1>Bases, binary, hexadecimal, ascii</h1>
+<p>You may have heard that computers use binary, but why is that? Simply because in
+electronic, if you want to keep it simple, components have two possible state:
+on or off -&gt; 0 or 1. The hardware is easier to design this way.</p>
+<div class="section" id="bases">
+<h2>Bases</h2>
+<p>When we normally count, in what we call <a class="reference external" href="http://en.wikipedia.org/wiki/Decimal">decimal</a>, is actually base-10, which means we
+use 10 numbers: from 0 to 9</p>
+<p>So if you count:</p>
+<div class="highlight-python"><div class="highlight"><pre>0, 1, 2, 3, 4, 5, 6, 7, 8, 9...
+</pre></div>
 </div>
-<div class="section" id="caffeine">
-<h2>Caffeine</h2>
-<p>In human, the dose is estimated to be 150 to 200mg per kilogram. For an average
-adult, <a class="reference external" href="http://en.wikipedia.org/wiki/Caffeine#Caffeine_toxicity">Wikipedia</a>
-tells us that this means 80 to 100 cups of coffee.</p>
-<p>That will obviously depends on the type an preparation of the coffee, but it
-will still be quite hard to drink this much coffee in a short span of time. But
-there are a lot of pills and candy with caffeine (some of you may know
-<a class="reference external" href="http://www.thinkgeek.com/homeoffice/food-caffeine/">ThinkGeek&#8217;s Food &amp; Caffeine</a> section), which may
-take you to the danger zone faster.</p>
+<p>And then what? 10 of course, but why is that: you reached the end of your
+<em>base</em>, thus increment the second digit, and loop back to beginning for the
+first digit, you could use this notation to see it better:</p>
+<div class="highlight-python"><div class="highlight"><pre>08, 09, 10...
+</pre></div>
 </div>
-<div class="section" id="potassium">
-<h2>Potassium</h2>
-<p>As I earlier shared on G+, potassium can be lethal too, and common source of
-potassium are bananas: everything is explained <a class="reference external" href="http://blogs.howstuffworks.com/keep-asking/can-you-die-from-eating-too-many-bananas/">right here</a>,
-but to sum it up, you would need 195000mg of potassium, or about 487 bananas:
-Good luck with that!</p>
+<p>Another way to think of it is to use the calculation behind it, we use base 10,
+so each digit is number * base ^ rank, with the rank starting out at 0. Lets use
+42:</p>
+<div class="highlight-python"><div class="highlight"><pre>(4 * 10¹) + (2 * 10⁰)
+(4 * 10) + (2 * 1)
+</pre></div>
 </div>
-<div class="section" id="vitamins">
-<h2>Vitamins</h2>
-<p>Ok, this one may not be one you&#8217;ll have to worry too often about in your life,
-but I love the fact that after all the &#8220;Eat your vegetables, you need your
-vitamins!&#8221;, we can die from too much of one of these vitamins.</p>
-<p>Having too much of a given vitamin is known as <a class="reference external" href="http://en.wikipedia.org/wiki/Vitamin_poisoning">Hypervitaminosis</a> which you can apparently have
-for vitamins A, D, E and maybe K.</p>
-<ul class="simple">
-<li>Vitamin A: Liver contains a lot of it, mostly in polar bear, seal, walrus,
-moose and husky. Polar bear are the most known about this because explorer of
-the Arctic regions came back with lot of illness due to it. Its toxicity
-levels are kind of <a class="reference external" href="http://en.wikipedia.org/wiki/Hypervitaminosis_A#Types_of_toxicity">complex</a>.</li>
-<li>Vitamin D: It does seem that the only source to have more of it are supplement
-orally taken.</li>
-<li>Vitamin E: There is not much information about it... <a class="reference external" href="http://en.wikipedia.org/wiki/Hypervitaminosis_E">Wikipedia page</a> page is quite short, and
-there are not a lot of other sources online.</li>
-</ul>
-<p>Unfortunately for the kids, you won&#8217;t be able to tell your mom you&#8217;ve had enough
-and she&#8217;s putting you at risk, finish your plate of broccoli!</p>
-<p>There are quite a lot, and I won&#8217;t dive myself in all the drugs lethal doses,
-but if you have more info, feel free to add information in the comments or on G+
-:)</p>
+<p>Any bases are possible, as long as you define what needs to be used to represent
+it, of course, some are more common than others, especially in computer science.</p>
+</div>
+<div class="section" id="binary">
+<h2>Binary</h2>
+<p>Given the previously explained on/off paradigm in electronic, it was chosen to
+use <a class="reference external" href="http://en.wikipedia.org/wiki/Binary_number">binary</a>, or base-2 in
+computers. We so have 2 numbers to count: 0 and 1</p>
+<p>If you apply the same as earlier:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>And that&#8217;s it, you reached the end of the base, so increment next digit:</p>
+<div class="highlight-python"><div class="highlight"><pre>0, 1, 10, 11, 100, 101, 110, 111...
+0  1   2   3    4    5    6    7...
+</pre></div>
+</div>
+<p>And as of 42:</p>
+<div class="highlight-python"><div class="highlight"><pre>101010
+
+0 * 2⁰ + 1 * 2¹ + 0 * 2² + 1 * 2³ + 0 * 2⁴ + 1 * 2⁵
+0      + 2      + 0      + 8      + 0      + 32
+= 42
+</pre></div>
+</div>
+<p>In computer, the number of <a class="reference external" href="http://en.wikipedia.org/wiki/Bit">bits</a> you may
+have heard about, is the number of binary digit used to represent the number.
+The <a class="reference external" href="http://en.wikipedia.org/wiki/Byte">byte</a> which is used to compute volume
+of data, is 8 bits, which allows for values up to 255.</p>
+<p>To identify we sometimes use prefix <strong>0b</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">0</span><span class="n">b101010</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hexadecimal">
+<h2>Hexadecimal</h2>
+<p>To avoid the need to read binary all the time, it is actually easier given the
+data is grouped in bytes in computers to represent values in <a class="reference external" href="http://en.wikipedia.org/wiki/Hexadecimal">hexadecimal</a> rather than binary or decimal.
+Hexadecimal is base-16, we use numbers from 0 to 9, and letters form A to F, and
+the prefix <strong>0x</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x2</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x4</span><span class="p">,</span> <span class="mh">0x5</span><span class="p">,</span> <span class="mh">0x6</span><span class="p">,</span> <span class="mh">0x7</span><span class="p">,</span> <span class="mh">0x8</span><span class="p">,</span> <span class="mh">0x9</span><span class="p">,</span> <span class="mh">0xa</span><span class="p">,</span> <span class="mh">0xb</span><span class="p">,</span> <span class="mh">0xc</span><span class="p">,</span> <span class="mh">0xd</span><span class="p">,</span> <span class="mh">0xe</span><span class="p">,</span> <span class="mh">0xf</span>
+</pre></div>
+</div>
+<p>Applying the same technique as before:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mh">0x0e</span><span class="p">,</span> <span class="mh">0x0f</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x11</span>
+</pre></div>
+</div>
+<p>And for 42:</p>
+<div class="highlight-python"><div class="highlight"><pre>0x2a
+
+a * 16⁰ + 2 * 16¹
+10 * 1 + 2 * 16
+= 42
+</pre></div>
+</div>
+</div>
+<div class="section" id="ascii">
+<h2>Ascii</h2>
+<p>Aka <a class="reference external" href="http://en.wikipedia.org/wiki/Ascii">American Standard Code for Information Interchange</a>, is the basic representation of
+characters used in computers, using numbers up to 128 to encode characters
+representation. It was later extended in various different versions to suite
+more languages.</p>
+<p>For example <strong>A</strong> is 0x41 (65), and following capital letters are following in
+order, and <strong>a</strong> is 0x61 (97) and so on.</p>
+<p>In binary, this means:</p>
+<div class="highlight-python"><div class="highlight"><pre>0x41 -&gt; 0b01000001
+0x61 -&gt; 0b01100001
+</pre></div>
+</div>
+<p>You may notice that the left hand bit is 0 in both case, as said, ascii is
+limited to 128, thus never using the bit of rank 7. The various extended
+versions make use of it, but have to be a different version for different
+languages as this still is quite limited.</p>
+<p>Later, the <a class="reference external" href="http://en.wikipedia.org/wiki/Unicode">unicode</a>, and <a class="reference external" href="http://en.wikipedia.org/wiki/Utf">UTF</a> variations where created, but this is a
+vast topic, which I will not talk about in here.</p>
 </div>
 </div>
 
@@ -145,12 +180,12 @@ but if you have more info, feel free to add information in the comments or on G+
         <div class="tags">
             <span>
                 Tags:
-                <a href="../../../tags/lethal.html">lethal</a>, <a href="../../../tags/body.html">body</a>, <a href="../../../tags/science.html">science</a></span>
+                <a href="../../../tags/bases.html">bases</a>, <a href="../../../tags/maths.html">maths</a>, <a href="../../../tags/counting.html">counting</a>, <a href="../../../tags/binary.html">binary</a>, <a href="../../../tags/hexadecimal.html">hexadecimal</a>, <a href="../../../tags/ascii.html">ascii</a></span>
         </div>
         </div>
-    <div id="disqus_thread"></div><script type="text/javascript">    var disqus_shortname = "tmyk";    var disqus_identifier = "2014/02/28/lethal_doses";    disqus_thread();</script><noscript>Please enable JavaScript to view the    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><ul class="related clearfix">
-            <li class="left"> &laquo; <a href="../../03/02/the_brain_imagination_and_memories.html">The Brain, Imagination, and Memories</a></li>
-            <li class="right"><a href="tickling.html">Tickling</a> &raquo; </li>
+    <div id="disqus_thread"></div><script type="text/javascript">    var disqus_shortname = "tmyk";    var disqus_identifier = "2014/03/06/bases_binary_hexadecimal_ascii";    disqus_thread();</script><noscript>Please enable JavaScript to view the    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><ul class="related clearfix">
+            <li class="left"></li>
+            <li class="right"><a href="../04/cinemagraph.html">Cinemagraph</a> &raquo; </li>
         </ul></article><aside class="sidebar"><section><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Tmyk -->
 <ins class="adsbygoogle"
@@ -162,25 +197,25 @@ but if you have more info, feel free to add information in the comments or on G+
 </script></section><section><div class="widget">
     <h1>Recent Posts</h1>
     <ul><li>
-            <a href="../../03/06/bases_binary_hexadecimal_ascii.html">Bases, binary, hexadecimal, ascii</a>
+            <a href="#">Bases, binary, hexadecimal, ascii</a>
         </li><li>
-            <a href="../../03/04/cinemagraph.html">Cinemagraph</a>
+            <a href="../04/cinemagraph.html">Cinemagraph</a>
         </li><li>
-            <a href="../../03/04/all_about_garlic.html">All about Garlic</a>
+            <a href="../04/all_about_garlic.html">All about Garlic</a>
         </li><li>
-            <a href="../../03/02/the_brain_imagination_and_memories.html">The Brain, Imagination, and Memories</a>
+            <a href="../02/the_brain_imagination_and_memories.html">The Brain, Imagination, and Memories</a>
         </li><li>
-            <a href="#">Lethal Doses</a>
+            <a href="../../02/28/lethal_doses.html">Lethal Doses</a>
         </li><li>
-            <a href="tickling.html">Tickling</a>
+            <a href="../../02/28/tickling.html">Tickling</a>
         </li><li>
-            <a href="blood_and_its_color_s.html">Blood and its color(s)</a>
+            <a href="../../02/28/blood_and_its_color_s.html">Blood and its color(s)</a>
         </li><li>
-            <a href="../26/doppler_effect.html">Doppler Effect</a>
+            <a href="../../02/26/doppler_effect.html">Doppler Effect</a>
         </li><li>
-            <a href="../23/human_brain_and_cooking.html">Human Brain and Cooking</a>
+            <a href="../../02/23/human_brain_and_cooking.html">Human Brain and Cooking</a>
         </li><li>
-            <a href="../23/maillard_reaction.html">Maillard Reaction</a>
+            <a href="../../02/23/maillard_reaction.html">Maillard Reaction</a>
         </li></ul>
 </div>
 </section><section><div class="widget" id="searchbox">
