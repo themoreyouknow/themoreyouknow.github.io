@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2014/03/07/the_largest_vehicle_in_the_world
    2014/03/06/bases_binary_hexadecimal_ascii
    2014/03/04/cinemagraph
    2014/03/04/all_about_garlic
