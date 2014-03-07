@@ -4,8 +4,6 @@ The Largest Vehicles in the world
 There are various type vehicles and there are therefore various record holders,
 so lets summarize that a little.
 
-.. contents::
-
 Largest two-axle
 ----------------
 
